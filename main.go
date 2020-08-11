@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"./bot"
-	"./config"
+	"github.com/eze-kiel/omnibot/bot"
+	"github.com/eze-kiel/omnibot/config"
 )
 
 func main() {

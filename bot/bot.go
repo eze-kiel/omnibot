@@ -5,8 +5,8 @@ import (
 	"log"
 	"strings"
 
-	"../commands"
-	"../config"
+	"github.com/eze-kiel/omnibot/commands"
+	"github.com/eze-kiel/omnibot/config"
 
 	"github.com/bwmarrin/discordgo"
 )
@@ -59,7 +59,6 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	switch args[0] {
 	case "hello":
-		_, _ = s.ChannelMessageSend(m.ChannelID, commands.Hello(m.Author.Username))
-		fmt.Println(m.Author.Username)
+		_, _ = s.ChannelMessageSend(m.ChannelID, commands.Hello(m.Author.ID))
 	}
 }

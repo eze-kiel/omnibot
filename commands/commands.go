@@ -1,5 +1,7 @@
 package commands
 
+import "fmt"
+
 func Hello(senderUsername string) string {
-	return "Hello @" + senderUsername
+	return fmt.Sprintf("Hello <@%s> :)", senderUsername)
 }
