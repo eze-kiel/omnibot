@@ -60,5 +60,8 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 	switch args[0] {
 	case "hello":
 		_, _ = s.ChannelMessageSend(m.ChannelID, commands.Hello(m.Author.ID))
+
+	case "chucknorris":
+		_, _ = s.ChannelMessageSend(m.ChannelID, commands.ChuckNorrisFact())
 	}
 }
