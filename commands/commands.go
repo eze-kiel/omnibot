@@ -12,10 +12,16 @@ type chuckNorrisFact struct {
 	Value string `json:"value"`
 }
 
+/*
+	Fun commands
+*/
+
+// Hello returns hello with the mention of the sender
 func Hello(senderUsername string) string {
 	return fmt.Sprintf("Hello <@%s> :)", senderUsername)
 }
 
+// ChuckNorrisFact returns a random string from a chuck norris API
 func ChuckNorrisFact() string {
 	resp, err := http.Get("https://api.chucknorris.io/jokes/random")
 	if err != nil {
